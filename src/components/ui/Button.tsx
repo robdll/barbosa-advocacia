@@ -10,12 +10,12 @@ interface BaseButtonProps {
   className?: string;
 }
 
-interface ButtonProps extends BaseButtonProps, ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends BaseButtonProps, Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> {
   asChild?: false;
   href?: never;
 }
 
-interface ButtonLinkProps extends BaseButtonProps, Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
+interface ButtonLinkProps extends BaseButtonProps, Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href' | 'children'> {
   asChild: true;
   href: string;
 }
