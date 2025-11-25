@@ -1,24 +1,23 @@
 'use client';
 
-import Image from 'next/image';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 
 export default function AboutSection() {
   return (
     <section
       id="sobre"
-      className="py-20 bg-dark-section relative"
+      className="py-20 bg-[#f8f8f8]"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-center">
           {/* Left Column - Content */}
           <ScrollAnimation direction="right" className="space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-dark-foreground">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-theme-foreground">
               Sobre Nós
             </h2>
-            <div className="space-y-4 text-dark-muted leading-relaxed">
+            <div className="space-y-4 text-theme-muted leading-relaxed">
               <p>
-                O escritório <strong className="text-dark-foreground">Barbosa Advocacia</strong> 
+                O escritório <strong className="text-theme-foreground">Barbosa Advocacia</strong> 
                 {' '}é uma referência em serviços jurídicos em Vitória da Conquista e região. 
                 Com anos de experiência e dedicação, oferecemos soluções jurídicas completas 
                 e personalizadas para nossos clientes.
@@ -36,15 +35,19 @@ export default function AboutSection() {
             </div>
           </ScrollAnimation>
 
-          {/* Right Column - Image */}
+          {/* Right Column - Video */}
           <ScrollAnimation direction="left" delay={0.2}>
-            <div className="relative w-full h-[400px] sm:h-[500px] rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="https://placehold.co/500x500/png"
-                alt="Equipe do escritório Barbosa Advocacia"
-                fill
-                className="object-cover"
-              />
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+              <video
+                src="/images/video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-full object-contain"
+              >
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
             </div>
           </ScrollAnimation>
         </div>

@@ -25,14 +25,14 @@ export default function ServicesSection() {
   return (
     <section
       id="servicos"
-      className="py-20 bg-gray-50"
+      className="py-20 bg-dark-section relative"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollAnimation direction="up" className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-theme-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-dark-foreground mb-4">
             Nossos Serviços
           </h2>
-          <p className="text-lg text-theme-muted max-w-2xl mx-auto">
+          <p className="text-lg text-dark-muted max-w-2xl mx-auto">
             Oferecemos uma ampla gama de serviços jurídicos para atender todas as suas necessidades legais.
           </p>
         </ScrollAnimation>
@@ -51,10 +51,10 @@ export default function ServicesSection() {
                     <div className="p-3 bg-theme-primary/10 rounded-lg">
                       {Icon && <Icon className="w-8 h-8 text-theme-primary" />}
                     </div>
-                    <h3 className="text-xl font-serif font-semibold text-theme-foreground">
+                    <h3 className="text-xl font-serif font-semibold text-dark-foreground">
                       {service.title}
                     </h3>
-                    <p className="text-theme-muted leading-relaxed">
+                    <p className="text-dark-muted leading-relaxed">
                       {service.description}
                     </p>
                   </div>

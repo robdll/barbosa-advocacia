@@ -39,15 +39,15 @@ export default function ContactSection() {
   return (
     <section
       id="contato"
-      className="py-20 bg-dark-section relative"
+      className="py-20 bg-[#f8f8f8]"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <ScrollAnimation direction="up" className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-dark-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-theme-foreground mb-4">
               Entre em Contato
             </h2>
-            <p className="text-lg text-dark-muted">
+            <p className="text-lg text-theme-muted">
               Estamos prontos para ajudar. Envie sua mensagem e retornaremos o mais breve possível.
             </p>
           </ScrollAnimation>
@@ -58,7 +58,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-dark-foreground mb-2"
+                    className="block text-sm font-medium text-theme-foreground mb-2"
                   >
                     Nome Completo
                   </label>
@@ -70,7 +70,6 @@ export default function ContactSection() {
                     onChange={handleChange}
                     required
                     placeholder="Seu nome completo"
-                    className="bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-400"
                   />
                 </div>
               </ScrollAnimation>
@@ -79,7 +78,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-dark-foreground mb-2"
+                    className="block text-sm font-medium text-theme-foreground mb-2"
                   >
                     E-mail
                   </label>
@@ -91,7 +90,6 @@ export default function ContactSection() {
                     onChange={handleChange}
                     required
                     placeholder="seu@email.com"
-                    className="bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-400"
                   />
                 </div>
               </ScrollAnimation>
@@ -100,7 +98,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-dark-foreground mb-2"
+                    className="block text-sm font-medium text-theme-foreground mb-2"
                   >
                     Mensagem
                   </label>
@@ -111,7 +109,6 @@ export default function ContactSection() {
                     onChange={handleChange}
                     required
                     placeholder="Como podemos ajudá-lo?"
-                    className="bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-400"
                   />
                 </div>
               </ScrollAnimation>

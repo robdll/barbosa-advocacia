@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
-            <Logo />
+            <Logo className="h-14" />
             <p className="text-sm leading-relaxed">
               Escritório de advocacia comprometido com a excelência jurídica e 
               a defesa dos direitos de nossos clientes em Vitória da Conquista e região.

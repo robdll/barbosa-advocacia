@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${libreBaskerville.variable} ${lato.variable}`}>
       <body className="font-body antialiased">
         <Navbar />
-        <main>{children}</main>
+        <main className="pt-20">{children}</main>
         <Footer />
         <WhatsAppFAB />
       </body>

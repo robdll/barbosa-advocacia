@@ -24,15 +24,24 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 relative bg-dark-section ${
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
           isScrolled
-            ? 'backdrop-blur-sm shadow-md'
+            ? 'backdrop-blur-sm shadow-lg'
             : ''
         }`}
+        style={{
+          background: 'radial-gradient(ellipse at center, #1a2433 0%, #111828 50%, #0a0e14 100%)',
+        }}
       >
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse 80% 60% at center, #1f2937 0%, transparent 60%)',
+          }}
+        ></div>
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex items-center justify-between h-20">
-            <Logo />
+            <Logo className="h-16" />
             
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">

@@ -17,7 +17,7 @@ export const WHATSAPP_MESSAGE = 'Olá, gostaria de mais informações sobre os s
 export const SERVICES = [
   {
     title: 'Direito Civil',
-    description: 'Atuação em questões relacionadas a contratos, propriedade, responsabilidade civil e demais assuntos do direito privado.',
+    description: 'Atuação em questões relacionadas a contratos, propriedade, responsabilidade civil e demais.',
     icon: 'Scale',
   },
   {
