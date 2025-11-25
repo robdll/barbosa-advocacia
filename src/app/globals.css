@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+:root {
+  --color-primary: 174 142 0; /* #ae8e00 */
+  --color-secondary: 0 155 174; /* #009bae */
+  
+  --color-background: 248 248 248; /* Off-white */
+  --color-foreground: 51 51 51;   /* #333333 */
+  --color-muted: 100 100 100;    /* Gray for subtitles/secondary text */
+}
+
+@theme {
+  --color-primary: oklch(65% 0.13 85);
+  --color-secondary: oklch(65% 0.15 200);
+  --color-background: oklch(100% 0 0);
+  --color-foreground: #333333;
+  --color-muted: oklch(50% 0 0);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body), sans-serif;
+    background-color: #f8f8f8;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), serif;
+  }
+}
+
+@layer utilities {
+  .bg-theme-primary {
+    background-color: oklch(65% 0.13 85);
+  }
+  
+  .bg-theme-secondary {
+    background-color: oklch(65% 0.15 200);
+  }
+  
+  .bg-theme-background {
+    background-color: #f8f8f8;
+  }
+  
+  .bg-dark-section {
+    background: radial-gradient(ellipse at center, #1a2433 0%, #111828 50%, #0a0e14 100%);
+    position: relative;
+  }
+  
+  .bg-dark-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at center, #1f2937 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .text-theme-primary {
+    color: oklch(65% 0.13 85);
+  }
+  
+  .text-theme-secondary {
+    color: oklch(65% 0.15 200);
+  }
+  
+  .text-theme-foreground {
+    color: #333333;
+  }
+  
+  .text-theme-muted {
+    color: oklch(50% 0 0);
+  }
+  
+  .text-dark-foreground {
+    color: oklch(95% 0 0);
+  }
+  
+  .text-dark-muted {
+    color: oklch(70% 0 0);
+  }
+  
+  .border-theme-primary {
+    border-color: oklch(65% 0.13 85);
+  }
+  
+  .border-theme-secondary {
+    border-color: oklch(65% 0.15 200);
+  }
+}
+
